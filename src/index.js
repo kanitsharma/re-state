@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import registerServiceWorker from './registerServiceWorker'
-import ReState from './store'
+import ReState from './restate'
 
 const initialState = {
   Name: 'Kanit'

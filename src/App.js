@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
-import { connect } from './store'
+import { connect } from './restate'
 
 const App = ({ Name, changeName }) => (
   <div className="App">
