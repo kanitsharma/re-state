@@ -32,10 +32,12 @@ export default class ReState extends React.Component {
 
 export const connect = (mapStateToProps, mapDispatchToProps) => (
   Component => (
-    <Consumer>
-      {
-        ({ store, dispatch }) => (<Component {...mapStateToProps(store)} {...mapDispatchToProps(dispatch)} />)
-      }
-    </Consumer>
+    props => (
+      <Consumer>
+        {
+          ({ store, dispatch }) => (<Component {...mapStateToProps(store)} {...mapDispatchToProps(dispatch)} {...props} />)
+        }
+      </Consumer>
+    )
   )
 )

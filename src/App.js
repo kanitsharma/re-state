@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './App.css'
 import { connect } from './restate'
 
@@ -16,7 +16,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  changeName: _ => ({ type: 'CHANGE_NAME', payload: { Name: 'Sharma' } })
+  changeName: _ => dispatch({ type: 'CHANGE_NAME', payload: { Name: 'Sharma' } })
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)
