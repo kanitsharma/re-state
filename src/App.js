@@ -2,21 +2,23 @@ import React from 'react'
 import './App.css'
 import { connect } from './restate'
 
-const App = ({ Name, changeName }) => (
+const App = ({ apiData, changeName }) => (
   <div className="App">
     <div>
-      <h1>Hi! {Name}</h1>
       <button onClick={changeName} > Change Name </button>
     </div>
+    {
+      JSON.stringify(apiData)
+    }
   </div>
 )
 
 const mapStateToProps = state => ({
-  Name: state.Name
+  ...state
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  changeName: _ => dispatch({ type: 'CHANGE_NAME', payload: { Name: 'Sharma' } })
+  changeName: _ => dispatch({ type: 'FETCH_DATA'})
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)

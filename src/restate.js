@@ -12,6 +12,7 @@ export default class ReState extends React.Component {
   }
 
   dispatch = ({ type, payload }) => {
+    this.props.applyMiddleWare(this.state)({ type, payload })(this.dispatch)
     this.setState(
       (prevState, props) => ({ ...payload }),
       _ => console.log({ type: type, nextState: this.state })
