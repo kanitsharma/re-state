@@ -1,3 +1,7 @@
-export const initialState = {
-  apiData: {}
-}
+import { Map } from 'immutable'
+
+export const initialState = Map(
+  {
+    apiData: {}
+  }
+)

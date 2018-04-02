@@ -9,7 +9,7 @@ import fetchDataMiddleWare from './fetchmiddleware'
 
 ReactDOM.render(
   <ReState
-    store={initialState}
+    store={initialState.toObject()}
     applyMiddleWare={fetchDataMiddleWare}
   >
     <App />
