@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import registerServiceWorker from './registerServiceWorker'
-import ReState from './restate'
+import ReState from 'react-deflux'
 import { initialState } from './store'
 import fetchDataMiddleWare from './fetchmiddleware'
 

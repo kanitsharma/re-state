@@ -9,9 +9,10 @@ export default class ReState extends React.Component {
     this.state = {
       ...props.store
     }
+    this.dispatch = this.dispatch.bind(this)
   }
 
-  dispatch = ({ type, payload }) => {
+  dispatch ({ type, payload }) {
     this.props.applyMiddleWare(this.state)({ type, payload })(this.dispatch)
     this.setState(
       (prevState, props) => ({ ...payload }),

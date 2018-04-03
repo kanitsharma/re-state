@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import { connect } from './restate'
+import { connect } from 'react-deflux'
 
 const App = ({ apiData, changeName }) => (
   <div className="App">
