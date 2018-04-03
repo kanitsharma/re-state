@@ -5,6 +5,10 @@ Built over react's new context API.
 
 ## Getting Started
 
+```javascript
+npm install --save react-deflux
+```
+
 Wrap ReState over your root component.
 
 ```javascript
