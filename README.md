@@ -13,14 +13,14 @@ Wrap ReState over your root component.
 
 ```javascript
 
-import ReState from 'react-deflux';
+import Provider from 'react-deflux';
 
-<ReState
+<Provider
   store={initialState} // initial state of your store
   applyMiddleWare={fetchDataMiddleWare} // Optional, Allows managing side-effects
 >
   <App />
-</ReState>
+</Provider>
 
 ```
 
